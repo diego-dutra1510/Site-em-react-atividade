@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  user-select: none;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #272727;
+}
+
+body {
+  font-family: 'Minecraft', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 1.5px;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('./assets/fonts/minecraft/Moja.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ba6300;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8d14;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ff8d14 #000000f1;
+}

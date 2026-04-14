@@ -1,0 +1,14 @@
+.Image-fundo{
+  width: 100%;
+}
+
+.Image-fundo img{
+  width: 100%;
+  height: 100vh;
+  image-rendering: optimizeQuality;
+}
+
+.bem-vindo{
+  width: 100%;
+  height: 50vh;
+}
