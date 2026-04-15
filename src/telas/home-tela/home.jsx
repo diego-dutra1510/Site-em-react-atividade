@@ -2,7 +2,9 @@ import { useState } from "react";
 import "./home.css";
 import video from "../../assets/video/Boot_subnautica.mp4";
 
+
 import Carousel from "../../component/carousel";
+import Card from "../../component/cartão";
 
 function Home({ startedGlobal, setStartedGlobal }) {
   const [loading, setLoading] = useState(false);
@@ -46,7 +48,9 @@ function Home({ startedGlobal, setStartedGlobal }) {
             <Carousel />
           </div>
 
-          <section className="bem-vindo"></section>
+          <section className="bem-vindo">
+            <Card/>
+          </section>
         </>
       )}
     </div>
