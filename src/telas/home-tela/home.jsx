@@ -1,29 +1,32 @@
 import { useState } from "react";
 import "./home.css";
 import video from "../../assets/video/Boot_subnautica.mp4";
-import banner from "../../assets/imagem/Subnautica.jpg";
 
-function Home() {
-  const [started, setStarted] = useState(false);
+import Carousel from "../../component/carousel";
+
+function Home({ startedGlobal, setStartedGlobal }) {
   const [loading, setLoading] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
   const [fade, setFade] = useState(false);
+  const [showHome, setShowHome] = useState(false);
 
   const handleStart = () => {
-    setStarted(true);
+    setStartedGlobal(true);
     setLoading(true);
+    setShowHome(false);
   };
 
   const handleEnd = () => {
     setFade(true);
     setTimeout(() => {
       setLoading(false);
+      setShowHome(true);
     }, 1000);
   };
 
   return (
     <div>
-      {!started && (
+      {!startedGlobal && (
         <div className="start-screen" onClick={handleStart}>
           <h1>Click para iniciar o PDA</h1>
         </div>
@@ -37,15 +40,12 @@ function Home() {
         </div>
       )}
 
-      {started && !loading && (
+      {startedGlobal && !loading && (
         <>
-          <div className="Image-fundo">
-            <img
-              src={banner}
-              className={imgLoaded ? "img loaded" : "img"}
-              onLoad={() => setImgLoaded(true)}
-            />
+          <div className={`Image-fundo ${showHome ? "show" : ""}`}>
+            <Carousel />
           </div>
+
           <section className="bem-vindo"></section>
         </>
       )}
