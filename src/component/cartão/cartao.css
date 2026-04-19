@@ -1,12 +1,42 @@
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #3ba7ff;
+    border-radius: 8px;
     padding: 16px;
     margin: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #4890ee83;
 }
 .card h2 {
     margin-top: 0;
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 1.10rem;
 }
 .card p {
-    color: #555;
+    color: #ffffff;
+}
+
+input{
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #004e6d;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #4890ee83;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 60%;
+    }
 }

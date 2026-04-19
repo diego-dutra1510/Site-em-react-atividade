@@ -1,0 +1,36 @@
+.footer {
+    width: 100%;
+    background: linear-gradient(to top, #021018, #03232e);
+    color: #a8e9fe;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(168, 233, 254, 0.2);
+
+    backdrop-filter: blur(8px);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.footer-author {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.footer-author span {
+    color: #ed7700f6;
+    font-weight: bold;
+}
+
+.footer:hover {
+    box-shadow: 0 -5px 25px rgba(0, 255, 255, 0.15);
+    transition: 0.3s;
+}

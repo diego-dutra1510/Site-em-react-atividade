@@ -18,7 +18,7 @@ function App() {
             path="/"
             element={<Home startedGlobal={pdaStarted} setStartedGlobal={setPdaStarted} />}
           />
-          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/wiki" element={<Sobre />} />
         </Routes>
       </div>
     </Router>

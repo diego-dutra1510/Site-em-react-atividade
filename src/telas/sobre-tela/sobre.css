@@ -1,0 +1,108 @@
+.wiki {
+    width: 100%;
+    min-height: 100vh;
+    padding: 48px 18px;
+    color: #a8e9fe;
+    background: linear-gradient(180deg, #020b12 0%, #031a24 100%);
+}
+
+.wiki-header {
+    text-align: center;
+    margin-bottom: 36px;
+    margin-top: 12px;
+}
+
+.wiki-header h1 {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    color: #00eaff;
+    letter-spacing: 0.5px;
+}
+
+.wiki-header p {
+    margin-top: 8px;
+    opacity: 0.75;
+    font-size: 0.95rem;
+}
+
+.wiki-section {
+    max-width: 860px;
+    margin: 0 auto 36px;
+}
+
+.wiki-section h2 {
+    margin-bottom: 18px;
+    padding-left: 10px;
+    border-left: 3px solid #00eaff;
+    font-size: 1.2rem;
+}
+
+.wiki-card {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 234, 255, 0.15);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: 0.25s ease;
+}
+
+.wiki-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 234, 255, 0.12);
+}
+
+.wiki-card h3 {
+    color: #00eaff;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.wiki-card p {
+    color: #e6faff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.wiki-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.wiki-cta h2 {
+    font-size: 1.3rem;
+}
+
+.wiki-cta p {
+    margin: 10px 0 18px;
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+.wiki-btn {
+    display: inline-block;
+    padding: 11px 22px;
+    background: linear-gradient(45deg, #00eaff, #0a6cff);
+    color: #001018;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.wiki-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 234, 255, 0.35);
+}
+
+.wiki-btn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+    .wiki {
+        padding: 28px 12px;
+    }
+
+    .wiki-card {
+        padding: 14px;
+    }
+}
