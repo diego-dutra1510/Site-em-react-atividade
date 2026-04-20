@@ -32,6 +32,12 @@ function Header() {
                 >
                     <FaBook style={{ marginRight: "6px" }} /> Wiki
                 </Link>
+                <Link
+                    to="/API"
+                    className={location.pathname === "/API" ? "active" : ""}
+                >
+                    <FaBook style={{ marginRight: "6px" }} /> Api
+                </Link>
             </nav>
 
             <div className="login">
@@ -67,6 +73,18 @@ function Header() {
                     <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                         <FaBook />
                         Wiki
+                    </div>
+
+                    <IoIosArrowForward />
+                </Link>
+                <Link
+                    to="/API"
+                    className={location.pathname === "/API" ? "active" : ""}
+                    onClick={() => setMenuAberto(false)}
+                >
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                        <FaBook />
+                        Api
                     </div>
 
                     <IoIosArrowForward />
