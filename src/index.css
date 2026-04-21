@@ -7,7 +7,7 @@
 #main {
   width: 100%;
   min-height: 100vh;
-  background-color: #272727;
+  background: linear-gradient(180deg, #020b12 0%, #031a24 100%);
 }
 
 body {
