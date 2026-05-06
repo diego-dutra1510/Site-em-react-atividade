@@ -11,14 +11,14 @@ import Api_tela from './telas/Api-tela/index'
 
 function App() {
   const [pdaStarted, setPdaStarted] = useState(false);
-  const [usuarios, setUsuarios] = useState([]);
+  const [livros, setLivros] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
 
-    api.get(`/users`).then(response => {
+    api.get(`/livros`).then(response => {
 
-      setUsuarios(response.data);
+      setLivros(response.data);
 
     })
 
@@ -42,7 +42,7 @@ function App() {
             element={<Home startedGlobal={pdaStarted} setStartedGlobal={setPdaStarted} />}
           />
           <Route path="/wiki" element={<Sobre />} />
-          <Route path="/API" element={<Api_tela Globalapi={usuarios} setGlobalapi={setUsuarios}/>} />
+          <Route path="/API" element={<Api_tela Globalapi={livros} setGlobalapi={setLivros} />} />
         </Routes>
       </div>
     </Router>

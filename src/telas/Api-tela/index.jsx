@@ -7,12 +7,9 @@ function Api_tela({ Globalapi }) {
     const [Id, setId] = useState("");
     const [Nome, setNome] = useState("");
 
-    const listaFiltrada = Globalapi.filter(user => {
-        const matchId = Id === "" || user.id === Number(Id);
-        const matchNome = Nome === "" || user.name.toLowerCase().includes(Nome);
+    const listaFiltrada = Globalapi
 
-        return matchId && matchNome;
-    });
+    console.log(listaFiltrada)
 
     return (
         <>
@@ -45,25 +42,23 @@ function Api_tela({ Globalapi }) {
 
                     <div className="todas fade">
                         {listaFiltrada.length > 0 ? (
-                            listaFiltrada.map(user => (
-                                <div key={user.id} className="card">
+                            listaFiltrada.map(livro => (
+                                <div key={livro.id} className="card">
 
                                     <div className="card-header">
-                                        <div className="avatar">
-                                            {user.name.charAt(0)}
+                                        <div className="capa">
+                                            <img
+                                                src={livro.img}
+                                                alt={livro.titulo}
+                                                style={{ width: '150px' }}
+                                            />
                                         </div>
-                                        <h3>{user.name}</h3>
+                                        <h3>{livro.titulo}</h3>
                                     </div>
-
-                                    <div className="card-body">
-                                        <p><strong>Email:</strong> {user.email}</p>
-                                        <p><strong>Cidade:</strong> {user.address.city}</p>
-                                    </div>
-
                                 </div>
                             ))
                         ) : (
-                            <div className="filtrada">Usuário não encontrado</div>
+                            <div className="filtrada">Livro não encontrado</div>
                         )}
                     </div>
 
